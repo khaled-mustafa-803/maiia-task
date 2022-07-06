@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface TimeSlotRepository extends CrudRepository<TimeSlot, String> {
-    List<TimeSlot> findByPractitionerId(String practitionerId);
+    List<TimeSlot> findByPractitionerId(Integer practitionerId);
 }

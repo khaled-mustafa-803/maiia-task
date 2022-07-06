@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PractitionerRepository extends CrudRepository<Practitioner, String> {
+public interface PractitionerRepository extends CrudRepository<Practitioner, Integer> {
     List<Practitioner> findAll();
 
 }

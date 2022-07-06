@@ -2,9 +2,11 @@ package com.maiia.pro;
 
 import com.github.javafaker.Faker;
 import com.maiia.pro.entity.Appointment;
+import com.maiia.pro.entity.Patient;
 import com.maiia.pro.entity.Practitioner;
 import com.maiia.pro.entity.TimeSlot;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
@@ -32,6 +34,14 @@ public class EntityFactory {
                 .patientId(patientId)
                 .startDate(start)
                 .endDate(end)
+                .build();
+    }
+
+    public Patient createPatient(){
+        return Patient.builder()
+                .birthDate(LocalDate.now())
+                .firstName(faker.name().firstName())
+                .lastName(faker.name().lastName())
                 .build();
     }
 }

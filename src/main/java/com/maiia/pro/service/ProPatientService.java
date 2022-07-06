@@ -12,7 +12,7 @@ public class ProPatientService {
     @Autowired
     private PatientRepository patientRepository;
 
-    public Patient find(String patientId) {
+    public Patient find(Integer patientId) {
         return patientRepository.findById(patientId).orElseThrow();
     }
 
