@@ -12,7 +12,7 @@ public class ProPractitionerService {
     @Autowired
     private PractitionerRepository practitionerRepository;
 
-    public Practitioner find(String practitionerId) {
+    public Practitioner find(Integer practitionerId) {
         return practitionerRepository.findById(practitionerId).orElseThrow();
     }
 
